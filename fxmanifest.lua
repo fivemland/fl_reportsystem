@@ -1,0 +1,6 @@
+fx_version("cerulean")
+game("gta5")
+author("Fivem Land")
+lua54("yes")
+shared_scripts({ "@es_extended/imports.lua", "config.lua" })
+server_script("server.lua")
