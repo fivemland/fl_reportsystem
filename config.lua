@@ -5,6 +5,11 @@ Config.DiscordWebhook = ""
 
 Config.MinCharacterToSendReport = 10
 
+Config.AdminRoles = {
+	"admin",
+	"mod",
+}
+
 -- You can disable the commands
 Config.EnableCommands = {
 	["Report"] = true,
