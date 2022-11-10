@@ -5,12 +5,11 @@ local Reporters = {}
 --Function
 
 function isAdmin(group)
-	for k, v in pairs(Config.AdminRoles) do
-		if v == group then
-			return true
-		end
+	if Config.AdminRoles[group] then 
+		return true 
+	else
+		return false
 	end
-	return false
 end
 
 function GetAdmins()
