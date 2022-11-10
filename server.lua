@@ -176,8 +176,8 @@ if Config.EnableCommands["Reply"] then
 						for k, v in pairs(GetAdmins()) do
 							local xTarget = ESX.GetPlayerFromId(k)
 							if xPlayer.source ~= xTarget.source then
-								if ToggledReports[Admin.source] then
-									TriggerClientEvent("chat:addMessage", Admin.source, {
+								if ToggledReports[xTarget.source] then
+									TriggerClientEvent("chat:addMessage", xTarget.source, {
 										template = '<div style="padding: 0.4vw 0.5vw; font-size: 15px; margin: 0.5vw; background-color:#2b2b2b; border: 2.2px solid #00d62e; border-radius: 10px;"><i class="fas fa-user-edit" style="font-size: medium;"></i> <span style="color: #00ff48; font-weight:600 ;">'
 											.. GetPlayerName(xPlayer.source)
 											.. "</span> (^3"
@@ -253,7 +253,7 @@ if Config.EnableCommands["CloseReport"] then
 					for k, v in pairs(GetAdmins()) do
 						local xTarget = ESX.GetPlayerFromId(k)
 						if xPlayer.source ~= xTarget.source then
-							TriggerClientEvent("chat:addMessage", Admin.source, {
+							TriggerClientEvent("chat:addMessage", xTarget.source, {
 								template = '<div style="padding: 0.4vw 0.5vw; font-size: 15px; margin: 0.5vw; background-color:#2b2b2b; border: 2.2px solid #00d62e; border-radius: 10px;"><i class="fas fa-user-edit" style="font-size: medium;"></i> <span style="color: #00ff48; font-weight:600 ;">'
 									.. GetPlayerName(xPlayer.source)
 									.. "</span> (^3"
